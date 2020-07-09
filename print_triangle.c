@@ -34,7 +34,7 @@
 #define PRINT_HELP_FORMATS "  %-10s -- %s\r\n"
 static void print_usage(const char *exe_name) {
     int eventid = 0;
-    printf("Usage: %s <lines>...\r\n", exe_name);
+    printf("Usage: %s <options> ...\r\n", exe_name);
     printf("Options:\r\n");
     printf(PRINT_HELP_FORMATS, "-h,--help", "Show this help message.");
     printf(PRINT_HELP_FORMATS, "-l TRIANGLE_LINES,--line=TRIANGLE_LINES",
