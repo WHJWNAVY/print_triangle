@@ -1,13 +1,14 @@
 src_dir=$(pwd)
-target=print_triangle
-objects=$(target:%=%.o)
+TARGET:=print_triangle
+OBJECTS:=$(TARGET:%=%.o)
+CC:=arm-926ejs-linux-gnueabi-gcc
 
-$(target):$(objects)
+$(TARGET):$(OBJECTS)
 
-all:$(target)
+all:$(TARGET)
 
 clean:
-	rm $(target) $(objects)
+	rm $(TARGET) $(OBJECTS)
 
 lint:
 	find ${src_dir} -iname "*.[ch]" | xargs clang-format-6.0 -i
